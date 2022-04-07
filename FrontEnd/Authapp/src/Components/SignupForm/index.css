@@ -1,0 +1,38 @@
+.log_card_signup {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.form_card_signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #c8c6c6;
+  border-radius: 8px;
+  padding: 20px;
+  width: 350px;
+}
+
+.btns {
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sign_btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: #ececec;
+  display: inline-block;
+}
+
+.sign_btn:hover {
+  background-color: #5584ac;
+  color: #fff;
+  cursor: pointer;
+}

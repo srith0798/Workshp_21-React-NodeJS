@@ -1,0 +1,16 @@
+.home_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #524a4e;
+}
+
+.card_head {
+  background-color: #c8c6c6;
+  line-height: 30px;
+  width: 50%;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 5rem;
+  padding: 16px;
+}

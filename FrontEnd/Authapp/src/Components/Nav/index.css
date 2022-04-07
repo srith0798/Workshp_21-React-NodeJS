@@ -1,0 +1,46 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.nav_bar {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-image: linear-gradient(to left, #f3e9dd, #fdf6ec);
+  color: #524a4e;
+}
+
+.nav_brand {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  /* font-style: italic; */
+  margin-right: 16px;
+  font-weight: 600;
+}
+
+.nav_title {
+  font-weight: 500;
+}
+
+.nav_links {
+  display: flex;
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.nav_link {
+  margin-right: 40px;
+  cursor: pointer;
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav_link:hover {
+  color: #7882a4;
+  border-bottom: 1px solid #524a4e;
+}

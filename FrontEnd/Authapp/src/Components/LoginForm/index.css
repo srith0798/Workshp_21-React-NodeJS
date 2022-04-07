@@ -1,0 +1,64 @@
+body {
+  /* background-image: linear-gradient(to left, #865439, #c68b59); */
+  background-color: #536162;
+}
+
+.nav_route {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+  margin: 0 16px;
+}
+
+.log_card {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.form_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #c8c6c6;
+  border-radius: 8px;
+  width: 450px;
+  height: 400px;
+  padding: 10px 16px;
+}
+
+.label_tag {
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.form_in {
+  margin-bottom: 16px;
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  height: 40px;
+  border-radius: 3px;
+  padding: 5px 16px;
+}
+
+.form_in::placeholder {
+  margin-left: 16px;
+}
+
+.submit_btn {
+  align-self: flex-start;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: #ececec;
+}
+
+.submit_btn:hover {
+  background-color: #00c897;
+  color: #fff;
+  cursor: pointer;
+}
