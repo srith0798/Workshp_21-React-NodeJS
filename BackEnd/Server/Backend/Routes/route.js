@@ -62,8 +62,6 @@ router.post("/", async (req, res) => {
         .json({ statusCode: 201, tokenList: tokens, msg: "Login Success" });
     else
       res.status(402).json({ statusCode: 402, error: "Invalid Credentials" });
-
-    // res.send(req.body);
   } catch (err) {
     console.log(`sorry! got an Error at: ${err}`);
   }
