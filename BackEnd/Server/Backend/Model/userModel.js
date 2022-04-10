@@ -19,14 +19,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  tokens: [
-    {
-      token: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  // tokens: [
+  //   {
+  //     token: {
+  //       type: String,
+  //       required: true,
+  //     },
+  //   },
+  // ],
 });
 
 //Hash Crypt
@@ -44,8 +44,8 @@ userSchema.methods.generateAuthToken = async function () {
   // console.log("token");
   try {
     const tokenId = jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
-    this.tokens = this.tokens.concat({ token: tokenId });
-    await this.save();
+    // this.tokens = this.tokens.concat({ token: tokenId });
+    // await this.save();
     return tokenId;
   } catch (err) {
     console.log(err);

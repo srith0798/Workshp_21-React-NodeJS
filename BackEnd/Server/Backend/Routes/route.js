@@ -5,6 +5,7 @@ const express = require("express");
 // const cors = require("cors");
 const router = express.Router();
 const userLog = require("../Model/userModel");
+const { findOne } = require("../Model/userModel");
 
 router.get("/", (req, res) => {
   res.send("Home");
@@ -54,17 +55,25 @@ router.post("/", async (req, res) => {
     const token = await auth.generateAuthToken();
 
     // console.log(token);
-    const { password, tokens } = auth;
+    const { password } = auth;
     const isMatch = await bcrypt.compare(userPassword, password);
     if (isMatch)
-      res
-        .status(201)
-        .json({ statusCode: 201, tokenList: tokens, msg: "Login Success" });
+      res.status(201).json({
+        statusCode: 201,
+        tokenId: token,
+        user: auth,
+        msg: "Login Success",
+      });
     else
       res.status(402).json({ statusCode: 402, error: "Invalid Credentials" });
   } catch (err) {
     console.log(`sorry! got an Error at: ${err}`);
   }
 });
+
+// router.get('/home',async (req,res)=>{
+//   const user = await userLog.findOne({ email: userMail })
+//   res.send(user)
+// })
 
 module.exports = router;
