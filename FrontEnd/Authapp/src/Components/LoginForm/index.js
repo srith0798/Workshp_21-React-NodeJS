@@ -36,16 +36,20 @@ function LoginForm() {
       Cookies.set("jwt_Token", tokenId, { expires: 1, path: "/" });
       navigate("/home", { replace: true });
       dispatchAction(onLogger(user));
-    } else if (statusCode === 400) {
-      window.alert(error);
     }
-    if (statusCode === 422) {
-      window.alert(error);
-    }
+    // } else if (statusCode === 400) {
+    //   window.alert(error);
+    // }
+    // (statusCode === 422) && window.alert(error);
+    // if (statusCode === 422) {
+    //   window.alert(error);
+    // }
     switch (statusCode) {
-      case "400":
+      case 400:
+        window.alert(error);
+        navigate("/signup");
         break;
-      case "422":
+      case 422:
         console.log(400);
         window.alert(error);
         break;

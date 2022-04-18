@@ -5,11 +5,7 @@ const express = require("express");
 // const cors = require("cors");
 const router = express.Router();
 const userLog = require("../Model/userModel");
-const { findOne } = require("../Model/userModel");
-
-router.get("/", (req, res) => {
-  res.send("Home");
-});
+// const { findOne } = require("../Model/userModel");
 
 // SignUp Route
 router.post("/signUp", async (req, res) => {
@@ -28,6 +24,7 @@ router.post("/signUp", async (req, res) => {
       return res.status(422).json({ statusCode: 422, error: "Email exists" });
     }
     const userAdd = new userLog({ name, email, password, rePassword });
+    // Hash takes place here
     const responseAdd = await userAdd.save();
     if (responseAdd) {
       res.status(201).json({ statusCode: 201, msg: "Success" });

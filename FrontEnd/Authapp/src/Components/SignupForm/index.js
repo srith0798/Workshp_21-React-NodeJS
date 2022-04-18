@@ -36,10 +36,11 @@ function SignupFrom() {
       return window.alert(`${error}`);
     }
     if (statusCode === 422) {
+      // (error !== "Email exists") ? window.alert("* Necessary !") :window.alert("Email exists")
       if (error !== "Email exists") {
         window.alert("* Necessary !");
       } else {
-        window.alert("Email exists");
+        window.alert(error);
       }
     } else {
       window.alert("Success");

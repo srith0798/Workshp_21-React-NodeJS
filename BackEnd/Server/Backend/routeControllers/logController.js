@@ -1,14 +1,16 @@
-const aboutMe = (req, res) => {
-  console.log("About");
-  res.send("AboutMe");
-};
+// Practice Purpose Don't Mind these..!
 
-const contactMe = (req, res) => {
-  console.log("Contact");
-  res.send("ContactMe");
-};
+// const aboutMe = (req, res) => {
+//   console.log("About");
+//   res.send("AboutMe");
+// };
 
-module.exports = {
-  contactMe,
-  aboutMe,
-};
+// const contactMe = (req, res) => {
+//   console.log("Contact");
+//   res.send("ContactMe");
+// };
+
+// module.exports = {
+//   contactMe,
+//   aboutMe,
+// };
